@@ -11,6 +11,13 @@ const HeroSection: React.FC = () => {
     }
   };
 
+  const scrollToServices = () => {
+    const servicesSection = document.querySelector('#services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center">
       <div className="absolute inset-0 overflow-hidden">
@@ -41,7 +48,7 @@ const HeroSection: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               
-              <Button variant="outline" size="large">
+              <Button variant="outline" size="large" onClick={scrollToServices}>
                 En Savoir Plus
               </Button>
             </div>
